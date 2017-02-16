@@ -24,48 +24,46 @@ from tensorflow.examples.tutorials.mnist import input_data
 import math
 import sys
 import getopt
+import init_graph as ig
+
 
 def usage():
-     print 'run.py -option'
-     print '<option>: -f <Fetch Data from web...>'
-     print '<option>: -w <Test on Webam...>'
-     print '<option>: -m <Test on MNIST Data...>'
+    print 'run.py -option'
+    print '<option>: -f <Fetch Data from web...>'
+    print '<option>: -w <Test on Webam...>'
+    print '<option>: -m <Test on MNIST Data...>'
+
 
 def main():
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "fhw", ["fetch", "help", "webcam"])
+        opts, args = getopt.getopt(sys.argv[1:], "fhw",
+                                   ["fetch", "help", "webcam"])
     except getopt.GetoptError as err:
 
         print('<option is not recognized>')
         usage()
         sys.exit(2)
 
-    parse_data = False
     for o, a in opts:
         if o in ("-f", "--fetch"):
-            parse_data = True
             print('Parsing Data...')
+            ig.InitGraph(o)
         elif o in ("-h", "--help"):
             usage()
             sys.exit()
+    #    elif o in ("-i", "--images"):
+    #            print('Test on Images...')
+    #imageToUse = mnist.test.images[0]
+    #plt.imshow(
+    #        np.reshape(imageToUse, [28, 28]), interpolation="nearest", cmap="gray")
+    #        getActivations(hidden_1, imageToUse)
+    #            getActivations(hidden_2, imageToUse)
+    #    getActivations(hidden_3, imageToUse)
         elif o in ("-w", "--webcam"):
             print('Test on Webam...')
         else:
             assert False, "unhandled option"
-            usage()
 
 
 if __name__ == "__main__":
     main()
-
-#if __name__ == "__main__":
-
-#TODO: plug webcam images here
-#imageToUse = mnist.test.images[0]
-
-#plt.imshow(
-#    np.reshape(imageToUse, [28, 28]), interpolation="nearest", cmap="gray")
-
-#getActivations(hidden_1, imageToUse)
-#getActivations(hidden_2, imageToUse)
-#getActivations(hidden_3, imageToUse)
