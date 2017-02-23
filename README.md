@@ -21,7 +21,7 @@ activations of the layers. 5 second delay has been used between image
 plotting.
 
 #![Demonstration of an activation Visualization](./doc/vis.png)
-#![Demonstration of an activation Visualization](./doc/vis.png)
+#![Demonstration of an activation Visualization](./doc/vis2.png)
 
 
 ### Dependencies
