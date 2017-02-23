@@ -1,6 +1,6 @@
 ### Deep Neural Network Visualization
 
-This is a toy example for visualization of deep neural network's layer
+This is a toy example for visualization of deep neural network layer
 activation. The DNN trained on MNIST training data.
 
 1) MNIST database downloaded and fetched from the web
@@ -37,12 +37,12 @@ It has been tested on MacOs Sierra 10.12.3 with
 
     ## Open a terminal.
 
-    Open `Terminal`. This tutorial assumes you are using `bash`, which you
+    Open `Terminal`. This instruction assumes you are using `bash`, which you
     probably are.
 
     ## Clone this repository
 
-    Using git, clone this tutorial and enter that directory.
+    Using git, clone this project and enter that directory.
 
     ```
     git clone https://github.com/attilaborcs/dnn-visualization.git
@@ -75,13 +75,6 @@ It has been tested on MacOs Sierra 10.12.3 with
     ```
     virtualenv --system-site-packages ~/tensorflow
     ```
-
-    > Note: If you have already installed anaconda, some versions of
-    > anaconda and virtualenv are not compatible.  If you have trouble,
-    > such as seeing errors about "sys.prefix", you may want to try to
-    > use the [TensorFlow anaconda installation instructions](https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html#anaconda-installation).
-    > You'll also need to install matplotlib and Pillow as well to get the full experience.
-
     You will need to Activate the environment, which is to say switch your
     Python enviroment to a fresh one with clean dependencies.
 
