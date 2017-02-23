@@ -18,7 +18,6 @@ import matplotlib.pyplot as plt
 import tensorflow.contrib.slim as slim
 from tensorflow.examples.tutorials.mnist import input_data
 
-
 def doublewrap(function):
     """
     A decorator decorator, allowing to use the decorator to be used without
@@ -34,7 +33,6 @@ def doublewrap(function):
             return lambda wrapee: function(wrapee, *args, **kwargs)
 
     return decorator
-
 
 @doublewrap
 def define_scope(function, scope=None, *args, **kwargs):
@@ -60,7 +58,6 @@ def define_scope(function, scope=None, *args, **kwargs):
         return getattr(self, attribute)
 
     return decorator
-
 
 class Model:
     """

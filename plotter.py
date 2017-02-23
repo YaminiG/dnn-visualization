@@ -18,7 +18,6 @@ def getActivations(layer, image, stimuli, sess):
         feed_dict={image: np.reshape(stimuli, [1, mnist_img_vec], order='F')})
     plotNNFilter(units)
 
-
 def plotNNFilter(units):
     filters = units.shape[3]
     plt.figure(1, figsize=(20, 20))

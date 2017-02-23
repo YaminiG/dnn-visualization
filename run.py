@@ -20,7 +20,6 @@ import plotter as myplot
 import params as prm
 from random import randint
 
-
 def TestVisualization(test_num, mnist, sess, model):
     """
     DNN Visualization done by randomly selecting predefined number
@@ -48,7 +47,6 @@ def TestVisualization(test_num, mnist, sess, model):
         myplot.getActivations(model.hidden_2, model.image, imageToUse, sess)
         print("showing #3 hidden layer activation, image #%d" % (randidx))
         myplot.getActivations(model.hidden_3, model.image, imageToUse, sess)
-
 
 def main():
     mnist = input_data.read_data_sets('./mnist/', one_hot=True)
