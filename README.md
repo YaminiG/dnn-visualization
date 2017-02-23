@@ -1,6 +1,6 @@
 ### Deep Neural Network Visualization
 
-This is a toy example for the visualization of a deep neural network's layer
+This is a toy example for visualization of deep neural network's layer
 activation. The DNN trained on MNIST training data.
 
 1) MNIST database downloaded and fetched from the web
@@ -20,13 +20,12 @@ Note that the visualization module first show the test image, then the
 activations of the layers. 5 second delay has been used between image
 plotting.
 
-#![DP-vMF-means Direcitonal Segmentation of the NYU
-#RGB-D dataset](./doc/figureDPvMF_segmentationOverlay_extendedAbstract_cropped.png)
-#![DDP-vMF-means Real-time Direcitonal ##Segmentation](./doc/figureDDPvMF_segmentationOverlay_extendedAbstract_cropped.png)
+#![Demonstration of an activation Visualization](./doc/vis.png)
+#![Demonstration of an activation Visualization](./doc/vis.png)
 
 
 ### Dependencies
-This code is dependent on TensorFlow and Matplotlib
+This code is dependent on TensorFlow and Matplotlib.
 It has been tested on MacOs Sierra 10.12.3 with
 - Python (2.7)
 - Matplotlib (1.3.1)
