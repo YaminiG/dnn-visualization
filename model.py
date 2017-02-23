@@ -1,17 +1,15 @@
 # Working example for my blog post at:
 # https://danijar.github.io/structuring-your-tensorflow-models
+#!/usr/bin/env python
 import functools
 import tensorflow as tf
 import matplotlib as mpl
 mpl.use('TkAgg')
-
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow.contrib.slim as slim
 from tensorflow.examples.tutorials.mnist import input_data
-import plotter as myplot
-
 
 def doublewrap(function):
     """
@@ -81,7 +79,7 @@ class Model:
     def optimize(self):
         logprob = tf.log(self.prediction + 1e-12)
         cross_entropy = -tf.reduce_sum(self.label * logprob)
-        optimizer = tf.train.RMSPropOptimizer(0.03)
+        optimizer = tf.train.AdamOptimizer(1e-4)
         return optimizer.minimize(cross_entropy)
 
     @define_scope
@@ -89,35 +87,3 @@ class Model:
         mistakes = tf.not_equal(
             tf.argmax(self.label, 1), tf.argmax(self.prediction, 1))
         return tf.reduce_mean(tf.cast(mistakes, tf.float32))
-
-
-def main():
-    mnist = input_data.read_data_sets('./mnist/', one_hot=True)
-    image = tf.placeholder(tf.float32, [None, 784])
-    label = tf.placeholder(tf.float32, [None, 10])
-    model = Model(image, label)
-    sess = tf.Session()
-    sess.run(tf.global_variables_initializer())
-
-    for _ in range(10):
-      images, labels = mnist.test.images, mnist.test.labels
-      error = sess.run(model.error, {image: images, label: labels})
-      print('Test error {:6.2f}%'.format(100 * error))
-      for _ in range(60):
-        images, labels = mnist.train.next_batch(100)
-        sess.run(model.optimize, {image: images, label: labels})
-
-
-    imageToUse = mnist.test.images[0]
-    plt.imshow(np.reshape(imageToUse,[28,28]), interpolation="nearest",
-    cmap="gray")
-    plt.show()
-    myplot.getActivations(model.hidden_1, model.image, imageToUse, sess)
-    myplot.getActivations(model.hidden_2, model.image, imageToUse, sess)
-    myplot.getActivations(model.hidden_3, model.image, imageToUse, sess)
-
-
-
-
-if __name__ == '__main__':
-  main()
