@@ -81,7 +81,7 @@ class Model:
         x = self.image
         x_image = tf.reshape(x, [-1, prm.mnist_img_size, prm.mnist_img_size, 1])
         self.hidden_1 = slim.conv2d(x_image, 5,
-                                    [prm.conv_size, prm.prm.conv_size])
+                                    [prm.conv_size, prm.conv_size])
         pool_1 = slim.max_pool2d(self.hidden_1,
                                  [prm.max_pool_size, prm.max_pool_size])
         self.hidden_2 = slim.conv2d(pool_1, 5, [prm.conv_size, prm.conv_size])

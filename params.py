@@ -7,6 +7,7 @@
 
 mnist_min_size = 1
 mnist_max_size = 10000
+iter_num = 1001
 mnist_img_size = 28
 mnist_img_vec = 784
 mnist_label_size = 10

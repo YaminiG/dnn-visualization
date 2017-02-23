@@ -56,14 +56,14 @@ def main():
     sess = tf.Session()
     sess.run(tf.global_variables_initializer())
 
-    for i in range(mnist_max_size + 1):  #mnist max train size: 50K
+    for i in range(prm.iter_num):
         images, labels = mnist.train.next_batch(prm.batch_size)
         sess.run(model.optimize, {image: images, label: labels})
         if i % 100 == 0 and i != 0:
             error = sess.run(model.error, {image: images, label: labels})
             print("step %d, training accuracy %g" % (i, error))
 
-    TestVisualization(test_num, mnist, sess, model)
+    TestVisualization(prm.test_num, mnist, sess, model)
 
 if __name__ == '__main__':
     main()

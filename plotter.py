@@ -15,7 +15,7 @@ from time import sleep
 def getActivations(layer, image, stimuli, sess):
     units = sess.run(
         layer,
-        feed_dict={image: np.reshape(stimuli, [1, mnist_img_vec], order='F')})
+        feed_dict={image: np.reshape(stimuli, [1, prm.mnist_img_vec], order='F')})
     plotNNFilter(units)
 
 def plotNNFilter(units):
