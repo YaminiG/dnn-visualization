@@ -1,7 +1,7 @@
 ### Deep Neural Network Visualization
 
 #### This is a toy example for visualization of deep neural network layer activation. The DNN trained on MNIST training data.
- 
+
 * MNIST database downloaded and fetched from the web
 
 * A convolutional neural network trained on the entire database consist of
@@ -91,7 +91,8 @@ You can try DNN visualization of mnist dataset located in the ./mnist/ folder by
 ```
 cd dnn-visualization; python run.py
 ```
+> * Code Styling: To format source files we use the YAPF tool with style settings set to "google". Each committed python source file should be formatted accordingly. To install YAPF run $ pip install yapf and use as yapf filename.py --style "google".
 
-> Note: Demonstration video can be found in ./doc folder  
+> * Note: Demonstration video can be found in ./doc folder  
 ### Contributors
 Attila Börcs
