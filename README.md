@@ -91,8 +91,17 @@ You can try DNN visualization of mnist dataset located in the ./mnist/ folder by
 ```
 cd dnn-visualization; python run.py
 ```
-> * Code Styling: To format source files we use the YAPF tool with style settings set to "google". Each committed python source file should be formatted accordingly. To install YAPF run $ pip install yapf and use as yapf filename.py --style "google".
+> * The code styling of this project follows Google standards and done with YAPF.
+To install YAPF run:
+```
+ pip install yapf   
+```
+> For code styling use:
+```
+ yapf filename.py --style "google" -i
+```
 
 > * Note: Demonstration video can be found in ./doc folder  
+
 ### Contributors
 Attila Börcs
