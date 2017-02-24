@@ -1,22 +1,25 @@
 ### Deep Neural Network Visualization
 
+#### Heading 4 ####
 This is a toy example for visualization of deep neural network layer
-activation. The DNN trained on MNIST training data.
+activation. The DNN trained on MNIST training data. #### Heading 4 ####
 
-1) MNIST database downloaded and fetched from the web
 
-2) A convolutional neural network trained on the entire database consist of
+* MNIST database downloaded and fetched from the web
+
+* A convolutional neural network trained on the entire database consist of
    three convolutional layer with kernel size: 5 followed by a max pool layer
    with kernel size: 2. The first and second convolutional layer performed 5
    times on it's input, the third one performed 20 times, followed by a fully
-   connected layer in the end. The loss function is cross entropy based, and
-   finally the optimizer performed by Adam optimizer.
+   connected layer in the end.
+    * The loss function is cross entropy based, and
+    finally the optimizer performed by Adam optimizer.
 
-3) A visualization test has been performed by selecting five test images
+* A visualization test has been performed by selecting five test images
   from MNIST randomly and plotting the corresponding activation of every
   hidden layer.
 
-Note that the visualization module first show the test image, then the
+>Note that the visualization module first show the test image, then the
 activations of the layers. 5 second delay has been used between image
 plotting.
 
@@ -49,7 +52,7 @@ It has been tested on MacOs Sierra 10.12.3 with
     cd dnn-visualization
     ```
 
-    ## Install Pip and Virtualenv
+    ## Install Pip, Virtualenv and Matplotlib
 
     Pip is a package management system used to install and manage software
     packages written in Python.  Virtualenv allows you to manage multiple
@@ -66,6 +69,7 @@ It has been tested on MacOs Sierra 10.12.3 with
     ```
     sudo easy_install --upgrade six
     sudo pip install --upgrade virtualenv
+    sudo pip install matplotlib
     ```
 
     These should some dependencies and Virtualenv.
@@ -91,5 +95,6 @@ You can try DNN visualization of mnist dataset located in the ./mnist/ folder by
 cd dnn-visualization; python run.py
 ```
 
+> Note: Demonstration video can be found in ./doc folder  
 ### Contributors
-Attila Borcs
+Attila Börcs
