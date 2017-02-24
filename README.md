@@ -1,10 +1,7 @@
 ### Deep Neural Network Visualization
 
-#### Heading 4 ####
-This is a toy example for visualization of deep neural network layer
-activation. The DNN trained on MNIST training data. #### Heading 4 ####
-
-
+#### This is a toy example for visualization of deep neural network layer activation. The DNN trained on MNIST training data.
+ 
 * MNIST database downloaded and fetched from the web
 
 * A convolutional neural network trained on the entire database consist of
