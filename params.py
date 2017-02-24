@@ -3,7 +3,7 @@
 #  @author Attila Borcs
 #
 # The parameters of the deep neural network and
-# it's helper functions
+# its helper functions
 
 mnist_min_size = 1
 mnist_max_size = 10000
